@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+option go_package = ".;pokemon";
+
+package pokemon;
+
+message PokeQuery {
+  int32 indexNo = 1;
+  int32 formType = 2;
+}
+
+message Pokemon {
+  int32 indexNo = 1;
+  int32 formType = 2;
+  string formName = 3;
+  string name = 4;
+  string type1 = 5;
+  string type2 = 6;
+  int32 hp = 7;
+  int32 attack = 8;
+  int32 defence = 9;
+  int32 specialAttack = 10;
+  int32 specialDefence = 11;
+  int32 speed = 12;
+  string ability1 = 13;
+  string ability2 = 14;
+  string hiddenAbility = 15;
+}
+
+service PokemonService {
+  rpc GetPokemon(PokeQuery) returns (Pokemon) {}
+}
