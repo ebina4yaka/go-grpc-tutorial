@@ -16,15 +16,15 @@ message Pokemon {
   string name = 4;
   string type1 = 5;
   string type2 = 6;
-  int32 hp = 7;
-  int32 attack = 8;
-  int32 defence = 9;
-  int32 specialAttack = 10;
-  int32 specialDefence = 11;
-  int32 speed = 12;
-  string ability1 = 13;
-  string ability2 = 14;
-  string hiddenAbility = 15;
+  string ability1 = 7;
+  string ability2 = 8;
+  string hiddenAbility = 9;
+  int32 hp = 10;
+  int32 attack = 11;
+  int32 defence = 12;
+  int32 specialAttack = 13;
+  int32 specialDefence = 14;
+  int32 speed = 15;
 }
 
 service PokemonService {
