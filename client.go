@@ -1,8 +1,8 @@
 package main
 
 import (
-	"context"
 	"github.com/ebina4yaka/go-grpc-tutorial/chat"
+	"golang.org/x/net/context"
 	"google.golang.org/grpc"
 	"log"
 )
