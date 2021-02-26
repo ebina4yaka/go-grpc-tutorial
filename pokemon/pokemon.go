@@ -9,8 +9,8 @@ type Server struct {}
 func (s *Server) GetPokemon(ctx context.Context, in *PokeQuery) (*Pokemon, error) {
 	return &Pokemon{
 		IndexNo:        120,
-		FormType:       0,
-		FormName:       "",
+		FormType:       1,
+		FormName:       "GOのすがた",
 		Name:           "けつばん",
 		Type1:          "ノーマル",
 		Type2:          "",

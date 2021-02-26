@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/ebina4yaka/go-grpc-tutorial/pokemon"
 	"google.golang.org/grpc"
+	_ "google.golang.org/grpc/encoding/gzip"
 	"log"
 	"net"
 )

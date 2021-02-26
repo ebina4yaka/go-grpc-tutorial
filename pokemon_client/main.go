@@ -5,6 +5,7 @@ import (
 	"fmt"
 	"github.com/ebina4yaka/go-grpc-tutorial/pokemon"
 	"google.golang.org/grpc"
+	"google.golang.org/grpc/encoding/gzip"
 	"log"
 )
 
@@ -21,7 +22,7 @@ func main() {
 
 	query := pokemon.PokeQuery{IndexNo: 120, FormType: 0}
 
-	response, err := client.GetPokemon(context.Background(), &query)
+	response, err := client.GetPokemon(context.Background(), &query, grpc.UseCompressor(gzip.Name))
 	if err != nil {
 		log.Fatalf("Error when calling GetPokemon: %s", err)
 	}
